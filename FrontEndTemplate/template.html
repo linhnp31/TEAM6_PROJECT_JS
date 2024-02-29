@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Giao Diện</title>
+        <meta charset="UTF-8">
+
+        <!-- Font Import -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+        <!-- DaisyUI-->
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+
+
+        <!-- Icons-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+        <!-- CSS -->
+        <link href="main.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="header">
+            <img src="https://cdn.ketnoibongda.vn/upload/images/12022330-845928092188375-8890160160420757664-o-2021-06-07.png" alt="JSClub"></img>
+
+            <div class="sidePart flex">
+                <label class="input border bg-white border-[3px] border-[#ad0214]  rounded-2xl  flex items-center gap-2">
+                    <span class="material-icons" aria-hidden="true" style="color: #ad0214;"> search </span>
+                    <input type="text" class="grow" placeholder="Search" style="color: #ad0214;"/>
+                </label>
+                <button class="btn text-white rounded-full border-transparent bg-[#ad0214] hover:border-transparent hover:bg-[#99000f]" style="margin-left: 1em;">LOG OUT</button>
+            </div>
+        </div>
+        <div class="menu-bar">
+            <div class="tab-buttons grid-cols-12">
+                <button class="btn menu-button col-span-3" aria-label="Trang chủ">TRANG CHỦ</button>
+                <button class="btn menu-button col-span-3" aria-label="Thông tin thành viên">THÔNG TIN THÀNH VIÊN</button>
+                <button class="btn menu-button col-span-3" aria-label="Đăng ký active">ĐĂNG KÍ ACTIVE</button>
+                <button class="btn menu-button col-span-3" aria-label="Nhiệm vụ">NHIỆM VỤ</button>
+            </div>
+            <div class="menu-buttons flex">
+                <button class="btn menu-button flex material-icons" aria-label="Menu" style="padding: 0 1em;">notifications</button>
+                <button class="btn menu-button flex material-icons" aria-label="Menu" style="padding: 0 1em;">menu</button>
+            </div>
+        </div>
+    </body>
+</html>
