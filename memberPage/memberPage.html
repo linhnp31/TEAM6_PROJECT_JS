@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Giao Diện</title>
+        <meta charset="UTF-8">
+
+        <!-- Font Import -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+        <!-- DaisyUI-->
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+
+
+        <!-- Icons-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+        <!-- CSS -->
+        <link href="main.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <script>
+        function showProfile() {
+            var profile = document.querySelector('.profile');
+
+            if (profile.style.display != "block"){
+                profile.style.display = "block";
+                profile.classList.add('slide-left');
+            } else {
+                profile.style.display = "none";
+            }
+            
+        }
+    </script>
+
+    <style>
+        tbody td {
+            padding: 1rem; /* equivalent to p-2 in Tailwind */
+            width: 16.666%; /* equivalent to w-1/6 in Tailwind */
+            color : #ad0214;
+            text-align: center;
+            border-bottom: 1px solid #ffbbc2;
+        }
+
+        tbody td:nth-child(1) {
+            width: 16.66667%; /* equivalent to w-1/6 in Tailwind */
+        }
+
+        tbody td:nth-child(2) {
+            width: 25%; /* equivalent to w-1/4 in Tailwind */
+        }
+
+        tbody td:nth-child(3) {
+            width: 8.33333%; /* equivalent to w-1/12 in Tailwind */
+        }
+
+        tbody td:nth-child(4),
+        tbody td:nth-child(5) {
+            width: 16.66667%; /* equivalent to w-1/6 in Tailwind */
+        }
+
+        tbody td:nth-child(6),
+        tbody td:nth-child(7) {
+            width: 2.08333%; /* equivalent to w-1/12 in Tailwind */
+        }
+
+
+        .slide-left {
+	        -webkit-animation: slide-left 0.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) 200ms both;
+	        animation: slide-left 0.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) 200ms both;
+        }
+
+        @-webkit-keyframes slide-left {
+            0% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+            100% {
+                -webkit-transform: translateX(-350px);
+                transform: translateX(-350px);
+                
+            }
+        }
+        @keyframes slide-left {
+            0% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+            100% {
+                -webkit-transform: translateX(-350px);
+                transform: translateX(-350px);
+            }
+        }
+    </style>
+
+    <body>
+        <div class="header">
+            <img src="https://cdn.ketnoibongda.vn/upload/images/12022330-845928092188375-8890160160420757664-o-2021-06-07.png" alt="JSClub"></img>
+
+            
+            <div class="flex flex-col"> 
+                <span style="color: #ad0214;">Welcome, NobleMode!</span>
+                <div class="sidePart flex">
+                    <label class="input border bg-white border-[3px] border-[#ad0214]  rounded-2xl  flex items-center gap-2">
+                        <span class="material-icons" aria-hidden="true" style="color: #ad0214;"> search </span>
+                        <input type="text" class="grow" placeholder="Search" style="color: #ad0214;"/>
+                    </label>
+                    <button class="btn text-white rounded-full border-transparent bg-[#ad0214] hover:border-transparent hover:bg-[#99000f]" style="margin-left: 1em;">LOG OUT</button>
+                </div>
+            </div>
+        </div>
+        <div class="menu-bar">
+            
+            <div class="tab-buttons grid-cols-12">
+                <button class="btn menu-button col-span-3" aria-label="Trang chủ">TRANG CHỦ</button>
+                <button class="btn menu-button col-span-3" aria-label="Thông tin thành viên">THÔNG TIN THÀNH VIÊN</button>
+                <button class="btn menu-button col-span-3" aria-label="Đăng ký active">ĐĂNG KÍ ACTIVE</button>
+                <button class="btn menu-button col-span-3" aria-label="Nhiệm vụ">NHIỆM VỤ</button>
+            </div>
+            <div class="menu-buttons flex">
+                <button class="btn menu-button flex material-icons" aria-label="Menu" style="padding: 0 1em;">notifications</button>
+                <button class="btn menu-button flex material-icons" onclick="showProfile()" aria-label="Menu" style="padding: 0 1em;">menu</button>
+            </div>
+        </div>
+        <!-- Menu Display-->
+
+        <!-- Profile Stuff-->
+        <div class="profile rounded-bl-[48px] w-80 border-[#ddc8ca] border-l border-b" style="display:none; position: absolute; right: -350px; top: 10.5em; z-index: 10; background: #ffe6e9;">
+            <div class="h-20 w-full" style="position: absolute; background: rgb(255,175,180); background: linear-gradient(0deg, rgba(255,175,180,1) 0%, rgba(255,98,115,1) 67%); box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.5) inset;"></div>
+
+            <div class="avatar flex flex-col items-center py-8">
+                <div class="w-24 rounded-full shadow-lg">
+                  <img src="https://scontent.fhan19-1.fna.fbcdn.net/v/t39.30808-1/429984850_912212297108397_5079309415821977674_n.jpg?stp=c194.27.177.177a_dst-jpg_p320x320&_nc_cat=102&ccb=1-7&_nc_sid=11e7ab&_nc_eui2=AeF6sTSEJmdwvgAZVKGwIf4zNst9vlJdJDM2y32-Ul0kM1pTqI_ZhAg7wsoSHjYWzZy7TeoknwNlIO8KmhojGZSF&_nc_ohc=MfDykq48e_IAX-TrO3M&_nc_ht=scontent.fhan19-1.fna&oh=00_AfDbzIiPRhg4yFGAq2SqolSzmTB02vExTd37QACIrYpp0Q&oe=65E5E37A" alt=""/>
+                </div>
+
+                <span class="pt-4" style="font-size: larger; color: #ad0214; font-weight: bolder;"> NobleMode </span>
+            </div>
+
+            <div class="flex justify-between">
+                <div class="ml-8 mb-4" style="color: #ad0214;">
+                <h1>Họ tên:   </h1>
+                <h2>MSSV:   </h2>
+                <h3>Ngày sinh:   </h3>
+                <h4>Ban:   </h4>
+                <h5>Role:   </h5>
+            </div>
+
+            <div class="text-end mr-8" style="color: #ad0214;">
+                <h1>Lã Diệu Minh</h1>
+                <h2>HE180677</h2>
+                <h3>26/01/2004</h3>
+                <h4>Chuyên Môn</h4>
+                <h5>Thành Viên</h5>
+            </div>
+            </div>
+            
+            <div class="mb-10 flex justify-center">
+                <div class="flex w-[80%] justify-between items-center">
+                    <a href="" class="underline font-semibold" style="color: #ad0214;">Xem Chi tiết</a>
+
+                    <button class="btn rounded-lg menu-button flex material-icons" aria-label="Menu" style="padding: 0 0.5em;">meeting_room</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Here -->
+        <div class="flex flex-col justify-between mx-14 mt-12 h-[70vh]">
+            <div class="flex flex-col">
+                <div class="flex flex-row justify-between">
+                    <div class="flex flex-row">
+                        <label class="input border bg-white border-[3px] border-[#ad0214]  rounded-2xl  flex items-center gap-2">
+                            <span class="material-icons" aria-hidden="true" style="color: #ad0214;"> search </span>
+                            <input type="text" class="grow" placeholder="Search" style="color: #ad0214;"/>
+                        </label>
+                        <button class="btn rounded-full menu-button bg-white ml-2 flex material-icons" aria-label="Menu" style="padding: 0 0.5em;">search</button>
+                    </div>
+                    
+                    <div class="flex flex-row">
+                        <button class="btn rounded-lg menu-button hover:bg-[#10ad02] mr-6 bg-white flex material-icons" aria-label="Menu" style="padding: 0 0.5em;">add</button>
+                        <button class="btn rounded-lg menu-button bg-white flex material-icons" aria-label="Menu" style="padding: 0 0.5em;">sort</button>
+                        <button class="btn rounded-lg menu-button bg-white flex material-icons" aria-label="Menu" style="padding: 0 0.5em;">filter_alt</button>
+                    </div>
+                </div>
+                <div class="bg-[#ffe6e9] h-[60vh] my-4 rounded-2xl">
+                    <table class="table-fixed w-full">
+                        <thead>
+                            <tr>
+                                <th class="w-1/6 p-2">
+                                    <div class="bg-[#ffbbc2] py-1 rounded-lg text-[#ad0214]">MSSV</div>
+                                </th>
+                                <th class="w-1/4 p-2">
+                                    <div class="bg-[#ffbbc2] py-1 rounded-lg text-[#ad0214]">Họ Tên</div>
+                                </th>
+                                <th class="w-1/12 p-2">
+                                    <div class="bg-[#ffbbc2] py-1 rounded-lg text-[#ad0214]">Gen</div>
+                                </th>
+                                <th class="w-1/6 p-2">
+                                    <div class="bg-[#ffbbc2] py-1 rounded-lg text-[#ad0214]">Ban</div>
+                                </th>
+                                <th class="w-1/6 p-2">
+                                    <div class="bg-[#ffbbc2] py-1 rounded-lg text-[#ad0214]">Vai trò</div>
+                                </th>
+                                <th class="w-[4.1666%] p-2">
+                                </th>
+                                <th class="w-[4.1666%] p-2">
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="overflow-y-scroll">
+                          <tr>
+                            <td>HE180677</td>
+                            <td>La Dieu Minh</td>
+                            <td>K18</td>
+                            <td>Chuyên Môn</td>
+                            <td>Thành Viên</td>
+                            <td>
+                                <button class="rounded-lg text-[#02ad3b]">
+                                    <i class="material-icons align-middle">info</i>
+                                </button>
+                            </td>
+                            <td>
+                                <button class="rounded-lg text-[#ad0214]">
+                                    <i class="material-icons align-middle">do_not_disturb_on</i>
+                                </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+
+
+            <div class="flex flex-row justify-end">
+                <button class="btn text-white px-10 rounded-full mr-2 border-transparent bg-[#ad0214] hover:border-transparent hover:bg-[#99000f]">CHỈNH SỬA</button>
+                <button class="btn text-white px-10 rounded-full border-transparent bg-[#ad0214] hover:border-transparent hover:bg-[#99000f]">LƯU</button>
+            </div>
+        </div>
+    </body>
+</html>
